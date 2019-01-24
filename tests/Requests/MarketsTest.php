@@ -30,7 +30,7 @@ class MarketsTest extends TestCase {
     /**
      * @test
      */
-    public function it_retrieves_a_markets_by_id()
+    public function it_retrieves_a_market_by_id()
     {
         $response = SoccerAPI::markets()->byId($this->marketsId);
 
