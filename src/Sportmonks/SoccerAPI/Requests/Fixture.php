@@ -25,6 +25,12 @@ class Fixture extends SoccerAPIClient {
         return $this->callData("fixtures/between/{$fromDate}/{$toDate}");
     }
 
+    public function betweenDatesByTeamId($fromDate, $toDate, $teamId)
+    {
+        $fromDate = $this->convertDate($fromDate);
+        $toDate = $this->convertDate($toDate);
+
+        return $this->callData("fixtures/between/{$fromDate}/{$toDate}/{$teamId}");
     }
 
     /**
