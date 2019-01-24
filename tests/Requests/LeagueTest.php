@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Config;
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
@@ -23,10 +22,9 @@ class LeagueTest extends TestCase {
      */
     public function it_retrieves_leagues_without_data()
     {
-        Config::set('soccerapi.without_data', true);
         $response = SoccerAPI::leagues()->all();
 
-        $this->assertArrayHasKey(0, $response);
+        $this->assertArrayHasKey(0, $response->data);
     }
 
     /**

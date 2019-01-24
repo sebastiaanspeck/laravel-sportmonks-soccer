@@ -22,10 +22,9 @@ class MarketsTest extends TestCase {
      */
     public function it_retrieves_markets_without_data()
     {
-        Config::set('soccerapi.without_data', true);
         $response = SoccerAPI::markets()->all();
 
-        $this->assertArrayHasKey(0, $response);
+        $this->assertArrayHasKey(0, $response->data);
     }
 
     /**
