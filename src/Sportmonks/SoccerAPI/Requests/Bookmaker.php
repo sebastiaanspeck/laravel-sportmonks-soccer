@@ -11,5 +11,9 @@ class Bookmaker extends SoccerAPIClient {
         return $this->callData('bookmakers');
     }
 
+    public function byId($bookmakerId)
+    {
+        return $this->callData("bookmakers/{$bookmakerId}");
+    }
 
 }
