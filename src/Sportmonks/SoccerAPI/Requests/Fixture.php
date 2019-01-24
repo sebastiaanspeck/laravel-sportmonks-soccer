@@ -66,16 +66,8 @@ class Fixture extends SoccerAPIClient {
         return $this->call("fixtures/multi/{$fixture_ids}");
     }
 
-    /**
-     * @param $firstTeamId
-     * @param $secondTeamId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
-     */
-    public function headToHead($firstTeamId,$secondTeamId)
     private function convertDate($date)
     {
-        return $this->call('head2head/' . $firstTeamId . '/' . $secondTeamId);
         if($date instanceof Carbon)
         {
             return $date->format('Y-m-d');
