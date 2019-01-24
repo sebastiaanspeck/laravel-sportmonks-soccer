@@ -69,7 +69,7 @@ class SoccerAPIClient {
             return $error;
             
             // other option would be
-            //abort($response->getResponse()->getStatusCode(), $matches[1]);
+            // abort($response->getResponse()->getStatusCode(), $matches[1]);
         }
 
         $body = json_decode($response->getBody()->getContents());
