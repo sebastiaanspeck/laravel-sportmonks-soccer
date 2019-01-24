@@ -3,8 +3,8 @@
 namespace Sportmonks\SoccerAPI;
 
 use Sportmonks\SoccerAPI\Requests\Bookmaker;
-use Sportmonks\SoccerAPI\Requests\Markets;
 use Sportmonks\SoccerAPI\Requests\InPlayOdds;
+use Sportmonks\SoccerAPI\Requests\Market;
 use Sportmonks\SoccerAPI\Requests\Commentary;
 use Sportmonks\SoccerAPI\Requests\Fixture;
 use Sportmonks\SoccerAPI\Requests\Head2Head;
@@ -192,11 +192,11 @@ class SoccerAPI {
     }
 
     /**
-     * @return \Sportmonks\SoccerAPI\Requests\Markets
+     * @return \Sportmonks\SoccerAPI\Requests\Market
      */
     public function markets()
     {
-        return new Markets();
+        return new Market();
     }
 
     /**

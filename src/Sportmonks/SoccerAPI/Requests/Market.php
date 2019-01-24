@@ -5,11 +5,11 @@ namespace Sportmonks\SoccerAPI\Requests;
 use Sportmonks\SoccerAPI\SoccerAPIClient;
 
 /**
- * Class Markets
+ * Class Market
  *
  * @package Sportmonks\SoccerAPI\Requests
  */
-class Markets extends SoccerAPIClient {
+class Market extends SoccerAPIClient {
     /**
      * @return mixed|\stdClass
      * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
