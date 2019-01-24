@@ -7,6 +7,11 @@ before_script:
  - composer self-update
  - composer install --prefer-source --no-interaction
 
+ env:
+  global:
+   - api_token=nZNtohI70oTVJp63riEpim7AMz6QfRiZkKjoQp1fA4dTGjdN2XLXHftlnn8x
+   - SPORTMONKS_API_TOKEN=nZNtohI70oTVJp63riEpim7AMz6QfRiZkKjoQp1fA4dTGjdN2XLXHftlnn8x
+
 script:
  - vendor/bin/phpunit --coverage-clover=coverage.xml
 
