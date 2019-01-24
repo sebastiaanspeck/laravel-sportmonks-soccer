@@ -22,6 +22,7 @@ use Sportmonks\SoccerAPI\Requests\TVStation;
 use Sportmonks\SoccerAPI\Requests\Venue;
 use Sportmonks\SoccerAPI\Requests\Video;
 use Sportmonks\SoccerAPI\Requests\Squad;
+use Sportmonks\SoccerAPI\Requests\Coach;
 
 class SoccerAPI {
 
@@ -123,6 +124,11 @@ class SoccerAPI {
     public function markets()
     {
         return new Markets();
+    }
+
+    public function coaches()
+    {
+        return new Coach();
     }
 
 }
