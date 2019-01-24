@@ -84,8 +84,6 @@ class SoccerAPIClient {
             {
                 throw new ApiRequestException($body->error, 500);
             }
-
-            return $response;
         }
 
         if($hasData && $this->withoutData)
