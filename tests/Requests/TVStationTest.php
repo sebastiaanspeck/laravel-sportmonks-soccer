@@ -2,7 +2,7 @@
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
- * @group video
+ * @group tvstation
  */
 class TVStationTest extends TestCase {
     

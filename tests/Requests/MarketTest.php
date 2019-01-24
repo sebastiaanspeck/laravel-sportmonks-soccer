@@ -1,11 +1,10 @@
 <?php
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
-
 /**
- * @group bookmaker
+ * @group market
  */
-class MarketsTest extends TestCase {
+class MarketTest extends TestCase {
 
     /**
      * @test

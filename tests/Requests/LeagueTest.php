@@ -3,7 +3,7 @@
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
- * @group competition
+ * @group league
  */
 class LeagueTest extends TestCase {
 

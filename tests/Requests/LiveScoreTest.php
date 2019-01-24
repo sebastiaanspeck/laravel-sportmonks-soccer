@@ -1,9 +1,8 @@
 <?php
-
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
- * @group live-score
+ * @group livescore
  */
 class LiveScoreTest extends TestCase {
 

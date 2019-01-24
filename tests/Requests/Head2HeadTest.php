@@ -2,7 +2,7 @@
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
- * @group team
+ * @group head2head
  */
 class Head2HeadTest extends TestCase {
 

@@ -2,7 +2,7 @@
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
- * @group top-scorer
+ * @group topscorer
  */
 class TopScorerTest extends TestCase {
 

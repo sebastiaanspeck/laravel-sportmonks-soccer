@@ -3,7 +3,7 @@
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
- * @group countries
+ * @group continents
  */
 class ContinentsTest extends TestCase {
 
