@@ -18,9 +18,6 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase {
     {
         parent::setup();
 
-        // A random account's token, replace it with a real token for testing
-        Config::set('soccerapi.api_token', 'YOUR_TEST_KEY_HERE');
-
         // Usable with an English Premier League plan
         $this->fixtureId = 10332982;
         $this->multipleFixtureIds = [10332982, 10332956];
