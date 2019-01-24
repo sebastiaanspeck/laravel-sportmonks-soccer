@@ -6,7 +6,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 
 class Squad extends SoccerAPIClient {
 
-    public function byTeamAndSeason($teamId, $seasonId)
+    public function byTeamAndSeasonId($teamId, $seasonId)
     {
         return $this->callData("squad/season/{$seasonId}/team/{$teamId}");
     }
