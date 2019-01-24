@@ -32,9 +32,9 @@ class MarketsTest extends TestCase {
      */
     public function it_retrieves_a_market_by_id()
     {
-        $response = SoccerAPI::markets()->byId($this->marketsId);
+        $response = SoccerAPI::markets()->byId($this->marketId);
 
-        $this->assertEquals($this->marketsId, $response->data->id);
+        $this->assertEquals($this->marketId, $response->data->id);
         $this->assertNotNull($response->data->name);
     }
 
