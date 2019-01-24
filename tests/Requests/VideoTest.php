@@ -19,9 +19,9 @@ class VideoTest extends TestCase {
     /**
      * @test
      */
-    public function it_retrieves_videos_by_match_id()
+    public function it_retrieves_videos_by_fixture_id()
     {
-        $response = SoccerAPI::videos()->byMatchId($this->matchId);
+        $response = SoccerAPI::videos()->byFixtureId($this->fixtureId);
 
         $this->assertNotEmpty($response->data);
     }

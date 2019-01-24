@@ -11,9 +11,9 @@ class Video extends SoccerAPIClient {
         return $this->callData('highlights/');
     }
 
-    public function byMatchId($matchId)
+    public function byFixtureId($fixtureId)
     {
-        return $this->callData('highlights/fixture/' . $matchId);
+        return $this->callData('highlights/fixture/' . $fixtureId);
     }
 
 }

@@ -9,9 +9,9 @@ class OddsTest extends TestCase {
     /**
      * @test
      */
-    public function it_retrieves_odds_by_match_id()
+    public function it_retrieves_odds_by_fixture_id()
     {
-        $response = SoccerAPI::odds()->byMatchId($this->matchId);
+        $response = SoccerAPI::odds()->byFixtureId($this->fixtureId);
 
         $this->assertNotEmpty($response->data);
     }
@@ -19,9 +19,9 @@ class OddsTest extends TestCase {
     /**
      * @test
      */
-    public function it_retrieves_odds_by_match_and_bookmaker_id()
+    public function it_retrieves_odds_by_fixture_and_bookmaker_id()
     {
-        $response = SoccerAPI::odds()->byMatchAndBookmakerId($this->matchId, $this->bookmakerId);
+        $response = SoccerAPI::odds()->byFixtureAndBookmakerId($this->fixtureId, $this->bookmakerId);
 
         $this->assertNotEmpty($response->data);
     }

@@ -32,19 +32,19 @@ class Fixture extends SoccerAPIClient {
         return $this->callData('fixtures/date/' . $date);
     }
 
-    public function byMatchId($id)
+    public function byFixtureId($id)
     {
         return $this->call('fixtures/' . $id);
+    }
+
+    public function byMultipleFixtureIds($array)
+    {
+        return $this->call('fixtures/multi/' . join(',', $array));
     }
 
     public function headToHead($firstTeamId,$secondTeamId)
     {
         return $this->call('head2head/' . $firstTeamId . '/' . $secondTeamId);
-    }
-
-    public function multi($array)
-    {
-        return $this->call('fixtures/multi/' . join(',', $array));
     }
 
 }

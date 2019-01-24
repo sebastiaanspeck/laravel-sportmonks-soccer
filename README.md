@@ -71,7 +71,7 @@ $response = SoccerAPI::leagues()->all();
 The above returns an object containing a `data` array.
 If you want to directly retrieve the data within `data`, change your config file: `'without_data' => true`
 
-Get a match by its id:
+Get a fixture by its id:
 
 ```
 $response = SoccerAPI::fixtures()->byId($id);

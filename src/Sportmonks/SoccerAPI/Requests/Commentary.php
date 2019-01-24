@@ -6,9 +6,9 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 
 class Commentary extends SoccerAPIClient {
 
-    public function byMatchId($matchId)
+    public function byFixtureId($fixtureId)
     {
-        return $this->callData('commentaries/fixture/' . $matchId);
+        return $this->callData("commentaries/fixture/{$fixtureId}");
     }
 
 }

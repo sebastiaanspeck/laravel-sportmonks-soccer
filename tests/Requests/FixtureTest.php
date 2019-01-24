@@ -13,8 +13,8 @@ class FixtureTest extends TestCase {
      */
     public function it_retrieves_fixtures_for_a_specific_date_range_using_carbon()
     {
-        $fromDate = Carbon::createFromDate(2016, 9, 10);
-        $toDate = Carbon::createFromDate(2016, 10, 10);
+        $fromDate = Carbon::createFromDate(2019, 1, 19);
+        $toDate = Carbon::createFromDate(2019, 1, 19);
         $response = SoccerAPI::fixtures()->betweenDates($fromDate,$toDate);
 
         $this->assertNotEmpty($response->data);
@@ -25,8 +25,8 @@ class FixtureTest extends TestCase {
      */
     public function it_retrieves_fixtures_for_a_specific_date_range_using_string()
     {
-        $fromDate = '2016-09-10';
-        $toDate = '2016-10-10';
+        $fromDate = '2019-01-19';
+        $toDate = '2019-01-19';
         $response = SoccerAPI::fixtures()->betweenDates($fromDate,$toDate);
 
         $this->assertNotEmpty($response->data);
@@ -37,7 +37,7 @@ class FixtureTest extends TestCase {
      */
     public function it_retrieves_fixtures_for_a_specific_date_using_carbon()
     {
-        $date = Carbon::createFromDate(2016, 9, 10);
+        $date = Carbon::createFromDate(2019, 1, 19);
         $response = SoccerAPI::fixtures()->byDate($date);
 
         $this->assertNotEmpty($response->data);
@@ -48,7 +48,7 @@ class FixtureTest extends TestCase {
      */
     public function it_retrieves_fixtures_for_a_specific_date_using_string()
     {
-        $date = '2016-09-10';
+        $date = '2019-01-19';
         $response = SoccerAPI::fixtures()->byDate($date);
 
         $this->assertNotEmpty($response->data);
@@ -57,21 +57,24 @@ class FixtureTest extends TestCase {
     /**
      * @test
      */
-    public function it_retrieves_fixture_by_match_id()
+    public function it_retrieves_fixture_by_fixture_id()
     {
-        $response = SoccerAPI::fixtures()->byMatchId($this->matchId);
+        $response = SoccerAPI::fixtures()->byFixtureId($this->fixtureId);
 
-        $this->assertEquals($this->matchId, $response->data->id);
+        $this->assertEquals($this->fixtureId, $response->data->id);
     }
 
     /**
      * @test
      */
-    public function it_retrieves_fixtures_between_teams()
+    public function it_retrieves_fixtures_by_multiple_fixture_ids()
     {
-        $response = SoccerAPI::fixtures()->headToHead($this->firstTeamId,$this->secondTeamId);
+        $response = SoccerAPI::fixtures()->byMultipleFixtureIds($this->multipleFixtureIds)->data;
 
-        $this->assertNotEmpty($response->data);
+        foreach($response as $key=>$fixture) {
+            $this->assertContains($fixture->id, $this->multipleFixtureIds);
+        }
+
     }
 
 }

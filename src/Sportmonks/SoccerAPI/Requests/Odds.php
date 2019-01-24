@@ -6,20 +6,20 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 
 class Odds extends SoccerAPIClient {
 
-    public function byMatchId($matchId)
+    public function byFixtureId($fixtureId)
     {
-        return $this->callData('odds/fixture/' . $matchId);
+        return $this->callData('odds/fixture/' . $fixtureId);
     }
 
-    public function byMatchAndBookmakerId($matchId, $bookmakerId)
+    public function byFixtureAndBookmakerId($fixtureId, $bookmakerId)
     {
-        return $this->callData('odds/fixture/' . $matchId . '/bookmaker/' . $bookmakerId);
+        return $this->callData('odds/fixture/' . $fixtureId . '/bookmaker/' . $bookmakerId);
     }
 
-    public function inplayByMatchId($matchId)
+    public function inplayByFixtureId($fixtureId)
     {
 
-        return $this->callData('odds/inplay/fixture/' . $matchId );
+        return $this->callData('odds/inplay/fixture/' . $fixtureId);
     }
 
 }

@@ -6,8 +6,8 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 
 class TVStation extends SoccerAPIClient {
 
-    public function byMatchId($id)
+    public function byFixtureId($fixtureId)
     {
-        return $this->call('tvstations/fixture/' . $id);
+        return $this->call('tvstations/fixture/' . $fixtureId);
     }
 }
