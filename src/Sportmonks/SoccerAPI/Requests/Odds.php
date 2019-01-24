@@ -31,15 +31,4 @@ class Odds extends SoccerAPIClient {
         return $this->callData('odds/fixture/' . $fixtureId . '/bookmaker/' . $bookmakerId);
     }
 
-    /**
-     * @param $fixtureId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
-     */
-    public function inplayByFixtureId($fixtureId)
-    {
-
-        return $this->callData('odds/inplay/fixture/' . $fixtureId);
-    }
-
 }
