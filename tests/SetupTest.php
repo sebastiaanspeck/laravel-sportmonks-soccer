@@ -17,7 +17,7 @@ class SetupTest extends TestCase {
     {
         Config::set('soccerapi.api_token', '');
 
-        $soccerAPI = new SoccerAPIClient();
+        new SoccerAPIClient();
     }
 
 }
