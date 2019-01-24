@@ -13,7 +13,7 @@ class LiveScoreTest extends TestCase {
     {
         $response = SoccerAPI::livescores()->today();
 
-        $this->assertObjectHasAttribute('data', $response);
+        $this->assertNotEmpty($response->data);
     }
 
     /**
@@ -23,7 +23,7 @@ class LiveScoreTest extends TestCase {
     {
         $response = SoccerAPI::livescores()->now();
 
-        $this->assertObjectHasAttribute('data', $response);
+        $this->assertNotEmpty($response->data);
     }
 
 }

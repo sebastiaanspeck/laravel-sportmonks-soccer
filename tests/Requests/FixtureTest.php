@@ -109,9 +109,9 @@ class FixtureTest extends TestCase {
      */
     public function it_retrieves_fixtures_by_multiple_fixture_ids()
     {
-        $response = SoccerAPI::fixtures()->byMultipleFixtureIds($this->multipleFixtureIds)->data;
+        $response = SoccerAPI::fixtures()->byMultipleFixtureIds($this->multipleFixtureIds);
 
-        foreach($response as $key=>$fixture) {
+        foreach($response->data as $fixture) {
             $this->assertContains($fixture->id, $this->multipleFixtureIds);
         }
 
