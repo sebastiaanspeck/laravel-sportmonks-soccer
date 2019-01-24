@@ -17,7 +17,7 @@ class Fixture extends SoccerAPIClient {
      * @return mixed|\stdClass
      * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
      */
-    public function betweenDates($fromDate,$toDate)
+    public function betweenDates($fromDate, $toDate)
     {
         $fromDate = $this->convertDate($fromDate);
         $toDate = $this->convertDate($toDate);
