@@ -19,15 +19,9 @@ class Fixture extends SoccerAPIClient {
      */
     public function betweenDates($fromDate,$toDate)
     {
-        if($fromDate instanceof Carbon)
-        {
-            $fromDate = $fromDate->format('Y-m-d');
-        }
+        $fromDate = $this->convertDate($fromDate);
+        $toDate = $this->convertDate($toDate);
 
-        if($toDate instanceof Carbon)
-        {
-            $toDate = $toDate->format('Y-m-d');
-        }
 
         return $this->callData('fixtures/between/' . $fromDate . '/' .$toDate);
     }
@@ -39,10 +33,7 @@ class Fixture extends SoccerAPIClient {
      */
     public function byDate($date)
     {
-        if($date instanceof Carbon)
-        {
-            $date = $date->format('Y-m-d');
-        }
+        $date = $this->convertDate($date);
 
         return $this->callData('fixtures/date/' . $date);
     }
@@ -74,8 +65,15 @@ class Fixture extends SoccerAPIClient {
      * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
      */
     public function headToHead($firstTeamId,$secondTeamId)
+    private function convertDate($date)
     {
         return $this->call('head2head/' . $firstTeamId . '/' . $secondTeamId);
+        if($date instanceof Carbon)
+        {
+            return $date->format('Y-m-d');
+        }
+
+        return $date;
     }
 
 }
