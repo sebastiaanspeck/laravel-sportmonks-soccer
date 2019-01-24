@@ -24,108 +24,175 @@ use Sportmonks\SoccerAPI\Requests\Video;
 use Sportmonks\SoccerAPI\Requests\Squad;
 use Sportmonks\SoccerAPI\Requests\Coach;
 
+/**
+ * Class SoccerAPI
+ *
+ * @package Sportmonks\SoccerAPI
+ */
 class SoccerAPI {
-
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Bookmaker
+     */
     public function bookmakers()
     {
         return new Bookmaker();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Commentary
+     */
     public function commentaries()
     {
         return new Commentary();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\League
+     */
     public function leagues()
     {
         return new League();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Head2Head
+     */
     public function head2head()
     {
         return new Head2Head();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Continent
+     */
     public function continents()
     {
         return new Continent();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Country
+     */
     public function countries()
     {
         return new Country();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Fixture
+     */
     public function fixtures()
     {
         return new Fixture();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\TVStation
+     */
     public function tvstations()
     {
         return new TVStation();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Venue
+     */
     public function venues()
     {
         return new Venue();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Round
+     */
     public function rounds()
     {
         return new Round();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\LiveScore
+     */
     public function livescores()
     {
         return new LiveScore();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Odds
+     */
     public function odds()
     {
         return new Odds();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Player
+     */
     public function players()
     {
         return new Player();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Season
+     */
     public function seasons()
     {
         return new Season();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Standings
+     */
     public function standings()
     {
         return new Standings();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Team
+     */
     public function teams()
     {
         return new Team();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\TopScorer
+     */
     public function topscorers()
     {
         return new TopScorer();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Video
+     */
     public function videos()
     {
         return new Video();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Squad
+     */
     public function squads()
     {
         return new Squad();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Markets
+     */
     public function markets()
     {
         return new Markets();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Coach
+     */
     public function coaches()
     {
         return new Coach();

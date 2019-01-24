@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Config;
 use Sportmonks\SoccerAPI\SoccerAPIClient;
 
+/**
+ * Class SetupTest
+ */
 class SetupTest extends TestCase {
 
     /**

@@ -6,6 +6,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Sportmonks\SoccerAPI\Exceptions\ApiRequestException;
 
+/**
+ * Class SoccerAPIClient
+ *
+ * @package Sportmonks\SoccerAPI
+ */
 class SoccerAPIClient {
 
     /* @var $client Client */
@@ -19,6 +24,9 @@ class SoccerAPIClient {
     protected $page = 1;
     protected $timezone;
     
+    /**
+     * SoccerAPIClient constructor.
+     */
     public function __construct()
     {
         $options = [
@@ -37,6 +45,12 @@ class SoccerAPIClient {
         $this->withoutData = empty(config('soccerapi.without_data')) ? false : config('soccerapi.without_data');
     }
 
+    /**
+     * @param $url
+     * @param bool $hasData
+     * @return mixed|\stdClass
+     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     */
     protected function call($url, $hasData = false)
     {
         $query = [
@@ -94,6 +108,11 @@ class SoccerAPIClient {
         return $body;
     }
 
+    /**
+     * @param $url
+     * @return mixed|\stdClass
+     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     */
     protected function callData($url)
     {
         return $this->call($url, true);
@@ -101,6 +120,7 @@ class SoccerAPIClient {
 
     /**
      * @param $include - string or array of relations to include with the query
+     * @return \Sportmonks\SoccerAPI\SoccerAPIClient
      */
     public function setInclude($include)
     {
@@ -116,6 +136,7 @@ class SoccerAPIClient {
 
     /**
      * @param $leagues - string or array of leagues to return only specific leagues with the query
+     * @return \Sportmonks\SoccerAPI\SoccerAPIClient
      */
     public function setLeagues($leagues)
     {
@@ -131,6 +152,7 @@ class SoccerAPIClient {
 
     /**
      * @param $perPage - int of per_page limit data in request
+     * @return \Sportmonks\SoccerAPI\SoccerAPIClient
      */
     public function setPerPage($perPage)
     {
@@ -141,6 +163,7 @@ class SoccerAPIClient {
 
     /**
      * @param $page - int of requested page
+     * @return \Sportmonks\SoccerAPI\SoccerAPIClient
      */
     public function setPage($page)
     {

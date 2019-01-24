@@ -4,6 +4,11 @@ namespace Sportmonks\SoccerAPI;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class SoccerAPIServiceProvider
+ *
+ * @package Sportmonks\SoccerAPI
+ */
 class SoccerAPIServiceProvider extends ServiceProvider {
 
     public function boot()

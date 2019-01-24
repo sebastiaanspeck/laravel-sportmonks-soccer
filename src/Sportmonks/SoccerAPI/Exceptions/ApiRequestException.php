@@ -4,5 +4,10 @@ namespace Sportmonks\SoccerAPI\Exceptions;
 
 use Exception;
 
-class ApiRequestException extends Exception 
+/**
+ * Class ApiRequestException
+ *
+ * @package Sportmonks\SoccerAPI\Exceptions
+ */
+class ApiRequestException extends Exception
 {}

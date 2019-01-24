@@ -4,10 +4,17 @@ use Illuminate\Support\Facades\Config;
 use Sportmonks\SoccerAPI\SoccerAPIServiceProvider;
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase {
+/**
+ * Class TestCase
+ */
+abstract class TestCase extends Illuminate\Foundation\Testing\TestCase {
 
     protected $matchId, $tvStationMatchId, $leagueId, $continentId, $countryId, $fixtureId, $teamId, $firstTeamId, $secondTeamId,
         $seasonId, $playerId, $bookmakerId, $venueId, $roundId, $team1Id, $team2Id;
 
+    /**
+     * setup
+     */
     public function setUp()
     {
         parent::setup();

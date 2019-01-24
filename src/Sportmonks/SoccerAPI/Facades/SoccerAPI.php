@@ -4,6 +4,11 @@ namespace Sportmonks\SoccerAPI\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * Class SoccerAPI
+ *
+ * @package Sportmonks\SoccerAPI\Facades
+ */
 class SoccerAPI extends Facade {
 
     /**
