@@ -22,8 +22,9 @@ class Fixture extends SoccerAPIClient {
         $fromDate = $this->convertDate($fromDate);
         $toDate = $this->convertDate($toDate);
 
+        return $this->callData("fixtures/between/{$fromDate}/{$toDate}");
+    }
 
-        return $this->callData('fixtures/between/' . $fromDate . '/' .$toDate);
     }
 
     /**
@@ -35,7 +36,7 @@ class Fixture extends SoccerAPIClient {
     {
         $date = $this->convertDate($date);
 
-        return $this->callData('fixtures/date/' . $date);
+        return $this->callData("fixtures/date/{$date}");
     }
 
     /**
@@ -45,7 +46,7 @@ class Fixture extends SoccerAPIClient {
      */
     public function byFixtureId($id)
     {
-        return $this->call('fixtures/' . $id);
+        return $this->call("fixtures/{$id}");
     }
 
     /**
@@ -55,7 +56,8 @@ class Fixture extends SoccerAPIClient {
      */
     public function byMultipleFixtureIds($array)
     {
-        return $this->call('fixtures/multi/' . join(',', $array));
+        $fixture_ids = join(',', $array);
+        return $this->call("fixtures/multi/{$fixture_ids}");
     }
 
     /**
