@@ -33,6 +33,46 @@ class FixtureTest extends TestCase {
     }
 
     /**
+    * @test
+    */
+    public function it_retrieves_fixtures_for_a_specific_date_range_using_carbon_by_team_id()
+    {
+        $fromDate = Carbon::createFromDate(2019, 1, 19);
+        $toDate = Carbon::createFromDate(2019, 1, 19);
+
+        $response = SoccerAPI::fixtures()->betweenDatesByTeamId($fromDate, $toDate, $this->teamId);
+
+        foreach($response->data as $fixture) {
+            if($this->assertEquals($fixture->localteam_id, $this->teamId) === false) {
+                $this->assertEquals($fixture->visitorteam_id, $this->teamId);
+            }
+        }
+
+        $this->assertNotEmpty($response->data);
+    }
+
+    /**
+     * @test
+     */
+    public function it_retrieves_fixtures_for_a_specific_date_range_using_string_by_team_id()
+    {
+        $fromDate = '2019-01-19';
+        $toDate = '2019-01-19';
+
+        $response = SoccerAPI::fixtures()->betweenDatesByTeamId($fromDate, $toDate, $this->teamId);
+
+        foreach($response->data as $fixture) {
+            if($this->assertEquals($fixture->localteam_id, $this->teamId) === false) {
+                $this->assertEquals($fixture->visitorteam_id, $this->teamId);
+            } else {
+                $this->assertEquals($fixture->localteam_id, $this->teamId);
+            }
+        }
+
+        $this->assertNotEmpty($response->data);
+    }
+
+    /**
      * @test
      */
     public function it_retrieves_fixtures_for_a_specific_date_using_carbon()
