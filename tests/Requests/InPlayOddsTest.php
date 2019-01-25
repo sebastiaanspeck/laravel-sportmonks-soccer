@@ -13,11 +13,7 @@ class InPlayOddsTest extends TestCase {
     {
         $response = SoccerAPI::inplayodds()->byFixtureId($this->fixtureId);
 
-        if(key_exists('data', $response) === false) {
-            $this->assertEquals($response->error_message, "Insufficient Privileges! Your current plan doesn't allow access to this section!");
-        } else {
-            $this->assertNotEmpty($response->data);
-        }
+        $this->assertObjectHasProperty('data', $response);
     }
 
 }
