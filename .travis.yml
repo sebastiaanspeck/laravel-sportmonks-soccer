@@ -1,15 +1,13 @@
 language: php
-
 php:
- - 7.1.3
-
+- 7.1.3
 before_script:
- - composer self-update
- - composer install --prefer-source --no-interaction
-
+- composer self-update
+- composer install --prefer-source --no-interaction
 script:
- - vendor/bin/phpunit --coverage-clover=coverage.xml
-
+- vendor/bin/phpunit --coverage-clover=coverage.xml
 after_success:
- - bash <(curl -s https://codecov.io/bash)
- 
+- bash <(curl -s https://codecov.io/bash)
+env:
+  matrix:
+    secure: Hyxne6GtjPPOIaeD0O31X4QmPxRhEHx/c62dDIgcu3qtRNtlOHPS3Js+P8j+lWr2NtRRQNRjZfJ6E7Dbt1d8u5AHvtsASR3caX7KXe2kXK9qfbolvnwxrKNIFXUZcgsRy/Bdh/6JHt7rMcD2Zu3SmDAbVqxKdFcPAddzfdptkKSUNZmxtJ1VO4XXzmiOVKyFK2dx1Si2JH846B3bQSNwvyAXWCCkPYT1/5IYklCz8suQk84tqWJeKl0aC7t2Epm/GYywhaI9cCJDNR+d1/fwgHaoeP6eBqfJn1oS+eSnm+ZMZooYN3Gje5HW0PIWXQ1ivxn94Hj9+9yNXJMvrUpC930YOClxwJazCnZEYe/6m8sQKFW8mG2e72tK1iFzNJHBfo0q+UiGpA1pPnYkTK0QxHM4P5/hMG2nPVP8d4zPMUrsmfu03qQgN5qsPojydKM2DNYKoJQRPmg9+PpTwalKyyjA/TpnMS21o/lqAC1aiW5GEJWAdqwWGCykrjYDwXea7xHpz2/ESucjUEB1Wh3Ha2pm+Eam9yYvctJHc8JZHy5P9LYdkMu0Wt7TGj1Tt72F9iIii4sTww6q+2q+RKL8HFrh3hdPFvJxKylQS9bhw27QorFsukzKj5w/JR56VmtxzibDxCrPrrtuivXFkmBFfEiMczkooh7bvqq2rB5gki4=
