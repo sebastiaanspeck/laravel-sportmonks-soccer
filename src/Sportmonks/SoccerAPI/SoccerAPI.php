@@ -24,6 +24,7 @@ use Sportmonks\SoccerAPI\Requests\Venue;
 use Sportmonks\SoccerAPI\Requests\Video;
 use Sportmonks\SoccerAPI\Requests\Squad;
 use Sportmonks\SoccerAPI\Requests\Coach;
+use Sportmonks\SoccerAPI\Requests\Healthcheck;
 
 /**
  * Class SoccerAPI
@@ -205,6 +206,14 @@ class SoccerAPI {
     public function coaches()
     {
         return new Coach();
+    }
+
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\Healthcheck
+     */
+    public function healthcheck()
+    {
+        return new Healthcheck();
     }
 
 }
