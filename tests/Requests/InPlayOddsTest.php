@@ -13,7 +13,7 @@ class InPlayOddsTest extends TestCase {
     {
         $response = SoccerAPI::inplayodds()->byFixtureId($this->fixtureId);
 
-        $this->assertObjectHasProperty('data', $response);
+        $this->assertObjectHasAttribute('data', $response);
     }
 
 }
