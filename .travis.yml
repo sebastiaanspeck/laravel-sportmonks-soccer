@@ -4,10 +4,7 @@ php:
 before_script:
 - composer self-update
 - composer install --prefer-source --no-interaction
-- echo $SPORTMONKS_API_TOKEN
 script:
 - vendor/bin/phpunit --coverage-clover=coverage.xml
 after_success:
 - bash <(curl -s https://codecov.io/bash)
-env:
-  secure: ZaMo/PsXM6GKDONCLxBsK5Xtf4Pq3SxN+NcAuBC5uXZm6x54GDi2UIZdaknTFYjcOCR+z9ghPr6KAnMJtSdXeRAwqPzq6mNhUNUVcZjrMreQh5N0yaEBmF/Sg6qy94xMl7gLiXad/x0zSy9naVH5pZ161tZU7dGd/0zcks3VTolAvKYxCec2xp1GRWMkUuZ0k2PH3Whb39difrzZrLmZhsrgDuKg78BPw++ee2kmpeuBs0L/Nh2BfG/KtDdi6GvAaV1DEaJQKF2wmtmIVGM7YSAokEXS2YpukmME5Uk616Hxm1grGLPa30Pa2l5A29NPIHjU9kbLpGN7d9G0Q0UF8lqHxjW8ipdfCt5YYaCbuy90VC2H9vrh14tbBbtIGpwbGvs3IGdzzGjpaW/XPoLzWMVs8LQbX2JqxMd8U6bQEDyYBDtyHUTNc+CeZ9hdoJebcwPe79UUzKyCQh6OTWc718wU/qpUOfpY+XcuBEjqzSoSX8Rx524KzFl8yUmEb5VnOqNtg29UoxbcYJ0i5nlr7/9SeeTiaujLUGpdzq3UHB9g3YsGgH+B/ymeJ2cJVkR3nuP6S3XRE5z4FCmGlSDa5OsCrqbXJaRSlrq/owo1ke4Hc5fAz86RkBOerj0qXCVpv/jHPkAepfLqqObxmSw8M90E0NlwAW3KranRiqEpGWM=
