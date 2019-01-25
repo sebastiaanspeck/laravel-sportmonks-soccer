@@ -18,8 +18,8 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase {
     {
         parent::setup();
 
-        // A random account's token, replace it with a real token for testing
-        Config::set('soccerapi.api_token', 'nZNtohI70oTVJp63riEpim7AMz6QfRiZkKjoQp1fA4dTGjdN2XLXHftlnn8x');
+        // Be sure that the SPORTMONKS_API_TOKEN in the .env-file is correct
+        Config::set('soccerapi.api_token', env('SPORTMONKS_API_TOKEN'));
 
         // Usable with an English Premier League plan
         $this->fixtureId = 10332982;
@@ -53,6 +53,10 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase {
         $app->register(SoccerAPIServiceProvider::class);
 
         $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+        
+        if (file_exists(dirname(__DIR__) . '/.env')) {
+            (new \Dotenv\Dotenv(dirname(__DIR__), '.env'))->load();
+        }
 
         return $app;
     }
