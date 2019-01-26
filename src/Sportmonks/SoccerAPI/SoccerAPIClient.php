@@ -4,7 +4,6 @@ namespace Sportmonks\SoccerAPI;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use Sportmonks\SoccerAPI\Exceptions\ApiRequestException;
 
 /**
  * Class SoccerAPIClient
@@ -108,18 +107,6 @@ class SoccerAPIClient {
         }
 
         $body = json_decode($response->getBody()->getContents());
-
-        if(property_exists($body, 'error'))
-        {
-            if(is_object($body->error))
-            {
-                throw new ApiRequestException($body->error->message, $body->error->code);
-            }
-            else
-            {
-                throw new ApiRequestException($body->error, 500);
-            }
-        }
 
         if($hasData && $this->withoutData)
         {
