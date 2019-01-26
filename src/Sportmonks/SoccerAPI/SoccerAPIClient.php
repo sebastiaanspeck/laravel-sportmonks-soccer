@@ -71,7 +71,7 @@ class SoccerAPIClient {
      * @param bool $abort
      * @return mixed|\stdClass
      */
-    protected function call($url, $hasData = false)
+    protected function call($url, $hasData = false, $abort = false)
     {
         $query = [
             'api_token' => $this->apiToken,
@@ -99,11 +99,12 @@ class SoccerAPIClient {
             $error = new \stdClass();
             $error->error_code = $response->getResponse()->getStatusCode();
             $error->error_message = $matches[1];
-            
+
+            if ($abort) {
+                abort($response->getResponse()->getStatusCode(), $matches[1]);
+            }
+
             return $error;
-            
-            // other option would be
-            // abort($response->getResponse()->getStatusCode(), $matches[1]);
         }
 
         $body = json_decode($response->getBody()->getContents());
