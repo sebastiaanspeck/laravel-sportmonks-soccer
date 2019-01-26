@@ -1,4 +1,5 @@
 <?php
+
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
@@ -15,5 +16,4 @@ class StandingsTest extends TestCase {
 
         $this->assertNotEmpty($response->data);
     }
-
 }

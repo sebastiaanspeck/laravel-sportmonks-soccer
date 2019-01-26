@@ -1,4 +1,5 @@
 <?php
+
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
@@ -16,5 +17,4 @@ class TVStationTest extends TestCase {
 
         $this->assertNotEmpty($response->data);
     }
-
 }

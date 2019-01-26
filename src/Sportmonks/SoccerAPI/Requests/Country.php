@@ -2,7 +2,6 @@
 
 namespace Sportmonks\SoccerAPI\Requests;
 
-
 use Sportmonks\SoccerAPI\SoccerAPIClient;
 
 /**

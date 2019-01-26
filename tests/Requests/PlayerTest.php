@@ -1,4 +1,5 @@
 <?php
+
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
@@ -15,5 +16,4 @@ class PlayerTest extends TestCase {
 
         $this->assertEquals($this->playerId, $response->data->player_id);
     }
-
 }

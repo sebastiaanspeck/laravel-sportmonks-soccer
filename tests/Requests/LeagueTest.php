@@ -37,5 +37,4 @@ class LeagueTest extends TestCase {
         $this->assertEquals($this->leagueId, $response->data->id);
         $this->assertNotNull($response->data->name);
     }
-
 }

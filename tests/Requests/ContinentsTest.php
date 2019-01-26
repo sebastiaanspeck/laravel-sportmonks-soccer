@@ -26,5 +26,4 @@ class ContinentsTest extends TestCase {
 
         $this->assertEquals($this->continentId, $response->data->id);
     }
-
 }

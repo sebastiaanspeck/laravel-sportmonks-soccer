@@ -1,4 +1,5 @@
 <?php
+
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
@@ -36,5 +37,4 @@ class MarketTest extends TestCase {
         $this->assertEquals($this->marketId, $response->data->id);
         $this->assertNotNull($response->data->name);
     }
-
 }

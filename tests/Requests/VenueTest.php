@@ -16,5 +16,4 @@ class VenueTest extends TestCase {
 
         $this->assertEquals($this->venueId, $response->data->id);
     }
-
 }

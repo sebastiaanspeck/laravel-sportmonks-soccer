@@ -9,8 +9,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  *
  * @package Sportmonks\SoccerAPI\Requests
  */
-class InPlayOdds extends SoccerAPIClient
-{
+class InPlayOdds extends SoccerAPIClient {
     /**
      * @param $fixtureId
      * @return mixed|\StdClass

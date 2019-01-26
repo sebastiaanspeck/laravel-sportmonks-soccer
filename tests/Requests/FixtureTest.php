@@ -114,7 +114,5 @@ class FixtureTest extends TestCase {
         foreach($response->data as $fixture) {
             $this->assertContains($fixture->id, $this->multipleFixtureIds);
         }
-
     }
-
 }

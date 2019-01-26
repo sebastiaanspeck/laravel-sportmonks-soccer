@@ -24,5 +24,4 @@ class CountriesTest extends TestCase {
         $response = SoccerAPI::countries()->byId($this->countryId);
         $this->assertEquals($this->countryId, $response->data->id);
     }
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 use Sportmonks\SoccerAPI\Facades\SoccerAPI;
 
 /**
@@ -25,5 +26,4 @@ class BookmakerTest extends TestCase {
 
         $this->assertEquals($this->bookmakerId, $response->data->id);
     }
-
 }
