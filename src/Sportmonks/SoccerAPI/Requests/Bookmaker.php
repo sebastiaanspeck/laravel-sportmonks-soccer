@@ -15,7 +15,7 @@ class Bookmaker extends SoccerAPIClient {
      */
     public function all()
     {
-        return $this->callData('bookmakers');
+        return $this->callData("bookmakers");
     }
 
     /**

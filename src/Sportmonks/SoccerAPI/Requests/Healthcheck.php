@@ -15,7 +15,7 @@ class Healthcheck extends SoccerAPIClient {
      */
     public function get()
     {
-        return $this->call('healthcheck');
+        return $this->call("healthcheck");
     }
 
 }

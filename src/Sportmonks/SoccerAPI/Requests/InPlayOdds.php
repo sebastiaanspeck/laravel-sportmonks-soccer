@@ -16,7 +16,6 @@ class InPlayOdds extends SoccerAPIClient {
      */
     public function byFixtureId($fixtureId)
     {
-
-        return $this->callData('odds/inplay/fixture/' . $fixtureId);
+        return $this->callData("odds/inplay/fixture/{$fixtureId}");
     }
 }

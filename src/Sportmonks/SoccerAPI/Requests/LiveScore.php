@@ -15,7 +15,7 @@ class LiveScore extends SoccerAPIClient {
      */
     public function today()
     {
-        return $this->callData('livescores');
+        return $this->callData("livescores");
     }
 
     /**
@@ -23,7 +23,7 @@ class LiveScore extends SoccerAPIClient {
      */
     public function now()
     {
-        return $this->callData('livescores/now');
+        return $this->callData("livescores/now");
     }
 
 }

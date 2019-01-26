@@ -16,7 +16,7 @@ class Venue extends SoccerAPIClient {
      */
     public function byId($venueId)
     {
-        return $this->call('venues/' . $venueId);
+        return $this->call("venues/{$venueId}");
     }
 
     /**
@@ -25,7 +25,7 @@ class Venue extends SoccerAPIClient {
      */
     public function bySeasonId($seasonId)
     {
-        return $this->call('venues/season/' . $seasonId);
+        return $this->call("venues/season/{$seasonId}");
     }
 
 }

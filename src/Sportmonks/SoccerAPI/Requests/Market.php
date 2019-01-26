@@ -15,7 +15,7 @@ class Market extends SoccerAPIClient {
      */
     public function all()
     {
-        return $this->callData('markets');
+        return $this->callData("markets");
     }
 
     /**
@@ -24,7 +24,7 @@ class Market extends SoccerAPIClient {
      */
     public function byId($marketsId)
     {
-        return $this->call('markets/' . $marketsId);
+        return $this->call("markets/{$marketsId}");
     }
 
 }

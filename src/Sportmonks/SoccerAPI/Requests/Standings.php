@@ -16,7 +16,7 @@ class Standings extends SoccerAPIClient {
      */
     public function bySeasonId($seasonId)
     {
-        return $this->callData('standings/season/' . $seasonId);
+        return $this->callData("standings/season/{$seasonId}");
     }
 
     /**
@@ -25,7 +25,7 @@ class Standings extends SoccerAPIClient {
      */
     public function liveBySeasonId($seasonId)
     {
-        return $this->callData('standings/season/live/' . $seasonId);
+        return $this->callData("standings/season/live/{$seasonId}");
     }
 
 }

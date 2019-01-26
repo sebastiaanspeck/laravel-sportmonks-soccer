@@ -15,7 +15,7 @@ class Season extends SoccerAPIClient {
      */
     public function all()
     {
-        return $this->callData('seasons');
+        return $this->callData("seasons");
     }
 
     /**
@@ -24,6 +24,6 @@ class Season extends SoccerAPIClient {
      */
     public function byId($seasonId)
     {
-        return $this->call('seasons/' . $seasonId);
+        return $this->call("seasons/{$seasonId}");
     }
 }

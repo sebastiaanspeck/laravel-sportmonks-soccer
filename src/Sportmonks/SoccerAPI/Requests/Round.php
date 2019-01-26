@@ -16,7 +16,7 @@ class Round extends SoccerAPIClient {
      */
     public function byId($roundId)
     {
-        return $this->call('rounds/' . $roundId);
+        return $this->call("rounds/{$roundId}");
     }
 
     /**
@@ -25,7 +25,7 @@ class Round extends SoccerAPIClient {
      */
     public function bySeasonId($seasonId)
     {
-        return $this->call('rounds/season/' . $seasonId);
+        return $this->call("rounds/season/{$seasonId}");
     }
 
 }

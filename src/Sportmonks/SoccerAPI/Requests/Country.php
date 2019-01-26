@@ -15,7 +15,7 @@ class Country extends SoccerAPIClient {
      */
     public function all()
     {
-        return $this->callData('countries');
+        return $this->callData("countries");
     }
 
     /**
@@ -24,7 +24,7 @@ class Country extends SoccerAPIClient {
      */
     public function byId($countryId)
     {
-        return $this->call('countries/' . $countryId);
+        return $this->call("countries/{$countryId}");
     }
 
 }

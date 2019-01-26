@@ -15,7 +15,7 @@ class Continent extends SoccerAPIClient {
      */
     public function all()
     {
-        return $this->callData('continents/');
+        return $this->callData("continents/");
     }
 
     /**
@@ -24,7 +24,7 @@ class Continent extends SoccerAPIClient {
      */
     public function byId($continentId)
     {
-        return $this->call('continents/' . $continentId);
+        return $this->call("continents/{$continentId}");
     }
 
 }

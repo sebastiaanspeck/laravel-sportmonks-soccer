@@ -15,7 +15,7 @@ class Video extends SoccerAPIClient {
      */
     public function all()
     {
-        return $this->callData('highlights/');
+        return $this->callData("highlights/");
     }
 
     /**
@@ -24,7 +24,7 @@ class Video extends SoccerAPIClient {
      */
     public function byFixtureId($fixtureId)
     {
-        return $this->callData('highlights/fixture/' . $fixtureId);
+        return $this->callData("highlights/fixture/{$fixtureId}");
     }
 
 }

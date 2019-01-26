@@ -16,7 +16,7 @@ class Odds extends SoccerAPIClient {
      */
     public function byFixtureId($fixtureId)
     {
-        return $this->callData('odds/fixture/' . $fixtureId);
+        return $this->callData("odds/fixture/{$fixtureId}");
     }
 
     /**
@@ -26,7 +26,7 @@ class Odds extends SoccerAPIClient {
      */
     public function byFixtureAndBookmakerId($fixtureId, $bookmakerId)
     {
-        return $this->callData('odds/fixture/' . $fixtureId . '/bookmaker/' . $bookmakerId);
+        return $this->callData("odds/fixture/{$fixtureId}/bookmaker/{$bookmakerId}");
     }
 
 }

@@ -16,7 +16,7 @@ class Player extends SoccerAPIClient {
      */
     public function byId($playerId)
     {
-        return $this->callData('players/' . $playerId);
+        return $this->callData("players/{$playerId}");
     }
 
 }
