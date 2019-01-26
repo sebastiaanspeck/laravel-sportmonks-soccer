@@ -12,8 +12,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 class Coach extends SoccerAPIClient {
     /**
      * @param $coachId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($coachId)
     {

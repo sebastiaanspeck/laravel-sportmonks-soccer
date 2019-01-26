@@ -11,8 +11,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class Video extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function all()
     {
@@ -21,8 +20,7 @@ class Video extends SoccerAPIClient {
 
     /**
      * @param $fixtureId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byFixtureId($fixtureId)
     {

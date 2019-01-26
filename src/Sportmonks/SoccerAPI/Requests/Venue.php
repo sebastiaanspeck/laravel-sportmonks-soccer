@@ -13,8 +13,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 class Venue extends SoccerAPIClient {
     /**
      * @param $venueId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($venueId)
     {
@@ -23,8 +22,7 @@ class Venue extends SoccerAPIClient {
 
     /**
      * @param $seasonId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function bySeasonId($seasonId)
     {

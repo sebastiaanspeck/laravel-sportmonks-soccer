@@ -13,8 +13,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 class Round extends SoccerAPIClient {
     /**
      * @param $roundId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($roundId)
     {
@@ -23,8 +22,7 @@ class Round extends SoccerAPIClient {
 
     /**
      * @param $seasonId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function bySeasonId($seasonId)
     {

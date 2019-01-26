@@ -11,18 +11,15 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class League extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function all()
     {
-        return $this->callData('leagues');
     }
 
     /**
      * @param $competitionId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($competitionId)
     {

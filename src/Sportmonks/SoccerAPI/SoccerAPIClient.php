@@ -16,12 +16,33 @@ class SoccerAPIClient {
     /* @var $client Client */
     protected $client;
 
+    /**
+     * @var \Illuminate\Config\Repository|mixed
+     */
     protected $apiToken;
+    /**
+     * @var bool|\Illuminate\Config\Repository|mixed
+     */
     protected $withoutData;
+    /**
+     * @var array
+     */
     protected $include = [];
+    /**
+     * @var array
+     */
     protected $leagues = [];
+    /**
+     * @var int
+     */
     protected $perPage = 50;
+    /**
+     * @var int
+     */
     protected $page = 1;
+    /**
+     * @var \Illuminate\Config\Repository|mixed
+     */
     protected $timezone;
     
     /**
@@ -48,8 +69,8 @@ class SoccerAPIClient {
     /**
      * @param $url
      * @param bool $hasData
+     * @param bool $abort
      * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
      */
     protected function call($url, $hasData = false)
     {
@@ -111,7 +132,6 @@ class SoccerAPIClient {
     /**
      * @param $url
      * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
      */
     protected function callData($url)
     {

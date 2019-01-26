@@ -12,8 +12,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class Continent extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function all()
     {
@@ -22,8 +21,7 @@ class Continent extends SoccerAPIClient {
 
     /**
      * @param $continentId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($continentId)
     {

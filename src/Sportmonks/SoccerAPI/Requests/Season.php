@@ -11,8 +11,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class Season extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function all()
     {
@@ -21,8 +20,7 @@ class Season extends SoccerAPIClient {
 
     /**
      * @param $seasonId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($seasonId)
     {

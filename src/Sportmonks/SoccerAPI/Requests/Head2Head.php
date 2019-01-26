@@ -13,8 +13,7 @@ class Head2Head extends SoccerAPIClient {
     /**
      * @param $team1Id
      * @param $team2Id
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function betweenTeams($team1Id,$team2Id)
     {

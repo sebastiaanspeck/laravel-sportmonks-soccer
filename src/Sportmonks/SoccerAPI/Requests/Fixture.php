@@ -14,8 +14,7 @@ class Fixture extends SoccerAPIClient {
     /**
      * @param $fromDate
      * @param $toDate
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function betweenDates($fromDate, $toDate)
     {
@@ -35,8 +34,7 @@ class Fixture extends SoccerAPIClient {
 
     /**
      * @param $date
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byDate($date)
     {
@@ -47,8 +45,7 @@ class Fixture extends SoccerAPIClient {
 
     /**
      * @param $id
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byFixtureId($id)
     {
@@ -57,8 +54,7 @@ class Fixture extends SoccerAPIClient {
 
     /**
      * @param $array
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byMultipleFixtureIds($array)
     {

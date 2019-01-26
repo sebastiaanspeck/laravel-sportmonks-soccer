@@ -12,8 +12,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 class TopScorer extends SoccerAPIClient {
     /**
      * @param $seasonId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function bySeasonId($seasonId)
     {
@@ -22,8 +21,7 @@ class TopScorer extends SoccerAPIClient {
 
     /**
      * @param $seasonId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function aggregatedBySeasonId($seasonId)
     {

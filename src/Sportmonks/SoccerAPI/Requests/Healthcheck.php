@@ -11,8 +11,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class Healthcheck extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function get()
     {

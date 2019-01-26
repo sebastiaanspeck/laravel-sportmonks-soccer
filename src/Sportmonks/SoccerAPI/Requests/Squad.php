@@ -13,8 +13,7 @@ class Squad extends SoccerAPIClient {
     /**
      * @param $teamId
      * @param $seasonId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byTeamAndSeasonId($teamId, $seasonId)
     {

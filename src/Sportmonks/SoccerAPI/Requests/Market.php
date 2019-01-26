@@ -11,8 +11,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class Market extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function all()
     {
@@ -21,8 +20,7 @@ class Market extends SoccerAPIClient {
 
     /**
      * @param $marketsId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byId($marketsId)
     {

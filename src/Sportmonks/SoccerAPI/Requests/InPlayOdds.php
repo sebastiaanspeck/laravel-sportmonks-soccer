@@ -13,8 +13,7 @@ class InPlayOdds extends SoccerAPIClient
 {
     /**
      * @param $fixtureId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byFixtureId($fixtureId)
     {

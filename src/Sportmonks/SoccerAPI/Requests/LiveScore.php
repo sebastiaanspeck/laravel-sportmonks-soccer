@@ -11,8 +11,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
  */
 class LiveScore extends SoccerAPIClient {
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function today()
     {
@@ -20,8 +19,7 @@ class LiveScore extends SoccerAPIClient {
     }
 
     /**
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function now()
     {

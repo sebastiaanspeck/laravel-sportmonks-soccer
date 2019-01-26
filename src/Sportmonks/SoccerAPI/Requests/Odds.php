@@ -12,8 +12,7 @@ use Sportmonks\SoccerAPI\SoccerAPIClient;
 class Odds extends SoccerAPIClient {
     /**
      * @param $fixtureId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byFixtureId($fixtureId)
     {
@@ -23,8 +22,7 @@ class Odds extends SoccerAPIClient {
     /**
      * @param $fixtureId
      * @param $bookmakerId
-     * @return mixed|\stdClass
-     * @throws \Sportmonks\SoccerAPI\Exceptions\ApiRequestException
+     * @return mixed|\StdClass
      */
     public function byFixtureAndBookmakerId($fixtureId, $bookmakerId)
     {
