@@ -25,6 +25,7 @@ use Sportmonks\SoccerAPI\Requests\Video;
 use Sportmonks\SoccerAPI\Requests\Squad;
 use Sportmonks\SoccerAPI\Requests\Coach;
 use Sportmonks\SoccerAPI\Requests\Healthcheck;
+use Sportmonks\SoccerAPI\Requests\AllRequests;
 
 /**
  * Class SoccerAPI
@@ -216,4 +217,11 @@ class SoccerAPI {
         return new Healthcheck();
     }
 
+    /**
+     * @return \Sportmonks\SoccerAPI\Requests\AllRequests
+     */
+    public function allrequests()
+    {
+        return new AllRequests();
+    }
 }
