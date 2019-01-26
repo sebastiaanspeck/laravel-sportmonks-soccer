@@ -82,7 +82,7 @@ class SoccerAPIClient {
         {
             $query['include'] = $this->include;
         }
-        if ($this->timezone)
+        if($this->timezone)
         {
             $query['tz'] = $this->timezone;
         }
